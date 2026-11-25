@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raio-X do Tempo de Tela | Simulador de Redes Sociais</title>
+  <meta name="description" content="Descubra quanto da sua vida você passa nas redes sociais e compare com dados de pesquisa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Fundo animado -->
+  <div class="fundo" aria-hidden="true">
+    <span class="bolha b1"></span>
+    <span class="bolha b2"></span>
+    <span class="bolha b3"></span>
+  </div>
+
+  <main class="container">
+    <header class="topo">
+      <p class="selo">📱 Simulador de Hábitos Digitais</p>
+      <h1>Raio-X do seu <span class="destaque">tempo de tela</span></h1>
+      <p class="subtitulo">
+        Quantas horas por dia você passa nas redes sociais? Digite abaixo e descubra
+        quanto isso pesa na sua semana, no seu mês e na sua vida.
+      </p>
+    </header>
+
+    <section class="cartao entrada">
+      <label for="horas">Horas por dia nas redes sociais</label>
+      <div class="linha-entrada">
+        <input type="number" id="horas" min="0" max="24" step="0.5" placeholder="Ex.: 5" inputmode="decimal">
+        <button id="botaoCalcular" type="button">Calcular meu Raio-X</button>
+      </div>
+      <input type="range" id="regua" min="0" max="16" step="0.5" value="0" aria-label="Ajustar horas com a régua">
+      <p class="dica">Dica: use o campo ou arraste a régua. Aperte <kbd>Enter</kbd> para calcular.</p>
+    </section>
+
+    <!-- Área onde o JavaScript mostra o resultado -->
+    <section id="resultado" class="resultado" aria-live="polite"></section>
+
+    <footer class="rodape">
+      <p>Base de dados simulada para fins educacionais · Média nacional: 4h/dia · Alerta de saúde: 6h/dia</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
